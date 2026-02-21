@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>MuhStore | Цифровые продукты и аксессуары</title>
     <style>
+        /* --- Все твои стили без изменений --- */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* Декоративные символы */
         .decor-symbols {
             position: fixed;
             top: 0;
@@ -44,7 +44,6 @@
             white-space: nowrap;
         }
 
-        /* Снежинки */
         .snowflakes {
             position: fixed;
             top: 0;
@@ -85,7 +84,6 @@
             z-index: 2;
         }
 
-        /* Хедер */
         .header {
             text-align: center;
             margin-bottom: 3rem;
@@ -143,7 +141,6 @@
             right: -30px;
         }
 
-        /* Статистика */
         .stats {
             display: flex;
             justify-content: center;
@@ -184,7 +181,6 @@
             letter-spacing: 1px;
         }
 
-        /* Заголовок секции продуктов */
         .section-title {
             text-align: center;
             font-size: 2rem;
@@ -203,7 +199,6 @@
             border-radius: 2px;
         }
 
-        /* Сетка продуктов */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -211,7 +206,6 @@
             margin-top: 2rem;
         }
 
-        /* Карточка продукта */
         .product-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -319,7 +313,6 @@
             transform: scale(0.98);
         }
 
-        /* Стиль для аксессуаров */
         .accessory-tag {
             position: absolute;
             top: 1rem;
@@ -335,12 +328,10 @@
             box-shadow: 0 2px 6px rgba(245, 158, 11, 0.2);
         }
 
-        /* ===== Новый блок отзывов ===== */
         .reviews-container {
             margin: 3rem 0;
         }
 
-        /* Список отзывов */
         .reviews-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -407,7 +398,6 @@
             border-left: 2px solid rgba(168, 139, 250, 0.3);
         }
 
-        /* Форма добавления отзыва */
         .review-form {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(168, 139, 250, 0.2);
@@ -464,7 +454,6 @@
             color: #6b7280;
         }
 
-        /* Рейтинг звёздами */
         .rating-group {
             display: flex;
             flex-direction: column;
@@ -516,7 +505,6 @@
             box-shadow: 0 6px 15px -4px #8b5cf6;
         }
 
-        /* Футер */
         .footer {
             margin-top: 4rem;
             text-align: center;
@@ -542,7 +530,6 @@
             text-decoration: underline;
         }
 
-        /* Плавающая кнопка поддержки Telegram */
         .support-button {
             position: fixed;
             bottom: 30px;
@@ -572,7 +559,6 @@
             fill: white;
         }
 
-        /* Модальное окно заказа (без изменений) */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -722,27 +708,14 @@
             transform: scale(0.98);
         }
 
-        /* Анимации */
         @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeIn {
@@ -750,45 +723,20 @@
             to { opacity: 1; }
         }
 
-        /* Адаптация для мобильных */
         @media (max-width: 480px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            .header h1 span {
-                font-size: 1.3rem;
-            }
-            .stats {
-                gap: 1rem;
-            }
-            .stat-item {
-                padding: 0.8rem 1rem;
-            }
-            .stat-number {
-                font-size: 1.5rem;
-            }
-            .support-button {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
-            .support-button svg {
-                width: 28px;
-                height: 28px;
-            }
-            .modal-container {
-                padding: 1.5rem;
-            }
-            .review-form {
-                padding: 1.5rem;
-            }
+            .header h1 { font-size: 2rem; }
+            .header h1 span { font-size: 1.3rem; }
+            .stats { gap: 1rem; }
+            .stat-item { padding: 0.8rem 1rem; }
+            .stat-number { font-size: 1.5rem; }
+            .support-button { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+            .support-button svg { width: 28px; height: 28px; }
+            .modal-container { padding: 1.5rem; }
+            .review-form { padding: 1.5rem; }
         }
 
         @media (max-width: 360px) {
-            .modal-container {
-                padding: 1rem;
-            }
+            .modal-container { padding: 1rem; }
         }
     </style>
 </head>
@@ -912,10 +860,8 @@
         <div class="reviews-container">
             <h2 class="section-title">Отзывы клиентов</h2>
             
-            <!-- Список отзывов (динамически заполняется) -->
-            <div class="reviews-list" id="reviewsList">
-                <!-- Сюда будут добавляться карточки отзывов -->
-            </div>
+            <!-- Список отзывов -->
+            <div class="reviews-list" id="reviewsList"></div>
 
             <!-- Форма добавления отзыва -->
             <div class="review-form">
@@ -978,12 +924,17 @@
                     <label for="phone">Номер телефона</label>
                     <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
                 </div>
-                <button type="submit" class="modal-submit">Отправить заказ в Telegram</button>
+                <button type="submit" class="modal-submit">Отправить заказ</button>
             </form>
         </div>
     </div>
 
     <script>
+        // ==== ТВОИ ДАННЫЕ ДЛЯ БОТА ====
+        const botToken = '8334292811:AAGK-wq9kIBVvtSHeOWtMOeVKxqC-myNp6M';
+        const chatId = '8208980991';
+        // ===============================
+
         // Функция для создания декоративных символов
         function createDecorSymbols() {
             const decor = document.getElementById('decor');
@@ -1030,7 +981,7 @@
             }
         }
 
-        // ===== Логика отзывов =====
+        // ===== Логика отзывов с сохранением в localStorage =====
         const reviewsList = document.getElementById('reviewsList');
         const reviewForm = document.getElementById('addReviewForm');
         const reviewName = document.getElementById('reviewName');
@@ -1042,12 +993,10 @@
             const card = document.createElement('div');
             card.className = 'review-card';
 
-            // Аватар (первая буква имени)
             const avatar = document.createElement('div');
             avatar.className = 'review-avatar';
             avatar.textContent = name.charAt(0).toUpperCase();
 
-            // Заголовок с именем и звёздами
             const authorDiv = document.createElement('div');
             authorDiv.className = 'review-author';
             const nameH4 = document.createElement('h4');
@@ -1064,15 +1013,45 @@
             header.appendChild(avatar);
             header.appendChild(authorDiv);
 
-            // Текст отзыва
             const textP = document.createElement('div');
             textP.className = 'review-text';
             textP.textContent = text;
 
             card.appendChild(header);
             card.appendChild(textP);
-
             return card;
+        }
+
+        // Загрузить отзывы из localStorage
+        function loadReviews() {
+            const saved = localStorage.getItem('muhstore-reviews');
+            if (saved) {
+                const reviews = JSON.parse(saved);
+                reviewsList.innerHTML = ''; // очищаем
+                reviews.forEach(r => {
+                    const card = createReviewCard(r.name, r.rating, r.text);
+                    reviewsList.appendChild(card);
+                });
+            } else {
+                // Если нет сохранённых, добавляем приветственный
+                const welcomeCard = createReviewCard('MuhStore', 5, 'Спасибо, что выбираете нас! Будем рады вашему отзыву.');
+                reviewsList.appendChild(welcomeCard);
+                saveReviews(); // сразу сохраняем, чтобы он не пропал
+            }
+        }
+
+        // Сохранить текущие отзывы в localStorage
+        function saveReviews() {
+            const cards = document.querySelectorAll('.review-card');
+            const reviews = [];
+            cards.forEach(card => {
+                const name = card.querySelector('.review-author h4').textContent;
+                const ratingText = card.querySelector('.review-rating').textContent;
+                const rating = ratingText.split('★').length - 1; // кол-во звёзд
+                const text = card.querySelector('.review-text').textContent;
+                reviews.push({ name, rating, text });
+            });
+            localStorage.setItem('muhstore-reviews', JSON.stringify(reviews));
         }
 
         // Обработчик отправки формы отзыва
@@ -1096,7 +1075,8 @@
 
             // Создаём карточку и добавляем в начало списка
             const newCard = createReviewCard(name, rating, text);
-            reviewsList.prepend(newCard); // свежие отзывы сверху
+            reviewsList.prepend(newCard);
+            saveReviews(); // сохраняем обновлённый список
 
             // Очищаем форму
             reviewName.value = '';
@@ -1106,11 +1086,8 @@
             }
         });
 
-        // Можно добавить пару демо-отзывов для примера (но они уже ненастоящие? по желанию можно оставить пустым)
-        // Если хотите совсем без стартовых, оставьте список пустым.
-        // Для красоты добавим один приветственный (но это уже не ненастоящий, а как бы подсказка)
-        const welcomeCard = createReviewCard('MuhStore', 5, 'Спасибо, что выбираете нас! Будем рады вашему отзыву.');
-        reviewsList.appendChild(welcomeCard);
+        // Загружаем отзывы при старте
+        loadReviews();
 
         // ===== Модальное окно заказа =====
         const modalOverlay = document.getElementById('modalOverlay');
@@ -1135,7 +1112,6 @@
             modalOverlay.classList.remove('active');
         }
 
-        // Обработчик кликов по кнопкам товаров
         document.querySelectorAll('.product-button').forEach(button => {
             button.addEventListener('click', (e) => {
                 const card = e.target.closest('.product-card');
@@ -1159,8 +1135,8 @@
             if (e.target === modalOverlay) closeModal();
         });
 
-        // Отправка формы заказа – исправлено для мобильных
-        orderForm.addEventListener('submit', (e) => {
+        // ===== Обработка отправки заказа =====
+        orderForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const name = document.getElementById('name').value.trim();
@@ -1171,14 +1147,30 @@
                 return;
             }
 
-            const message = `Заказ с сайта MuhStore%0A%0AТовар: ${encodeURIComponent(currentProduct.name)}%0AЦена: ${encodeURIComponent(currentProduct.price)}%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}`;
-            const telegramUrl = `https://t.me/tjkm04?text=${message}`;
+            // 1. Отправляем уведомление боту
+            const messageToBot = `Новый заказ:\nТовар: ${currentProduct.name}\nЦена: ${currentProduct.price}\nИмя: ${name}\nТелефон: ${phone}`;
+
+            try {
+                await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: messageToBot,
+                        parse_mode: 'HTML'
+                    })
+                });
+                console.log('Уведомление боту отправлено');
+            } catch (error) {
+                console.error('Ошибка отправки боту:', error);
+            }
+
+            // 2. Открываем чат с менеджером (как было раньше)
+            const messageToManager = `Заказ с сайта MuhStore%0A%0AТовар: ${encodeURIComponent(currentProduct.name)}%0AЦена: ${encodeURIComponent(currentProduct.price)}%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}`;
+            const telegramUrl = `https://t.me/tjkm04?text=${messageToManager}`;
 
             closeModal();
-
-            setTimeout(() => {
-                window.location.href = telegramUrl;
-            }, 150);
+            window.location.href = telegramUrl; // сразу переходим в чат с менеджером
         });
 
         // Простая маска для телефона
